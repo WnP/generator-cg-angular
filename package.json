@@ -1,5 +1,5 @@
 {
-  "name": "generator-cg-angular",
+  "name": "generator-wnp-angular",
   "version": "3.2.0",
   "description": "Yeoman Generator for Enterprise Angular projects.",
   "keywords": [
@@ -9,14 +9,14 @@
   "homepage": "https://github.com/cgross/generator-cg-angular",
   "bugs": "https://github.com/cgross/generator-cg-angular/issues",
   "author": {
-    "name": "Chris Gross",
-    "email": "schtoo@schtoo.com",
-    "url": "https://github.com/cgross"
+    "name": "Steeve",
+    "email": "mo0ofier@gmail.com",
+    "url": "https://github.com/WnP"
   },
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cgross/generator-cg-angular.git"
+    "url": "git://github.com/WnP/generator-wnp-angular.git"
   },
   "scripts": {
     "test": "mocha"
