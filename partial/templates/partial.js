@@ -6,10 +6,6 @@
 (function() {
   'use strict';
 
-  angular
-    .module('<%= appname %>')
-    .controller('<%= ctrlname %>', <%= _.camelize(ctrlname) %>)
-
   /*
    * @name <%= _.camelize(ctrlname) %>
    * @desc
@@ -19,6 +15,10 @@
    */
   function <%= _.camelize(ctrlname) %>($scope){
 
-  };
+  }
+
+  angular
+    .module('<%= appname %>')
+    .controller('<%= ctrlname %>', <%= _.camelize(ctrlname) %>);
 
 })();

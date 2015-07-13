@@ -6,10 +6,6 @@
 (function() {
   'use strict';
 
-  angular
-    .module('<%= appname %>')
-    .filter('<%= _.camelize(name) %>', <%= _.camelize(name) %>)
-
   /*
    * @name <%= _.camelize(name) %>
    * @desc
@@ -21,6 +17,10 @@
     return function(input, arg) {
       return 'output';
     };
-  };
+  }
+
+  angular
+    .module('<%= appname %>')
+    .filter('<%= _.camelize(name) %>', <%= _.camelize(name) %>);
 
 })();

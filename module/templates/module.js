@@ -5,14 +5,10 @@
 
 (function() {
   'use strict';
-
-  angular
-    .module('<%= _.camelize(name) %>', ['ui.bootstrap','ui.utils','<%= routerModuleName %>','ngAnimate']);
-
-  <% if (!uirouter) { %>
+<% if (!uirouter) { %>
   angular
     .module('<%= _.camelize(name) %>')
-    .config(<%= _.camelize(name) %>Route)
+    .config(<%= _.camelize(name) %>Route);
 
   /*
    * @name <%= _.camelize(name) %>Route
@@ -25,12 +21,12 @@
 
       /* Add New Routes Above */
 
-  };
-  <% } %>
-  <% if (uirouter) { %>
+  }
+<% } %>
+<% if (uirouter) { %>
   angular
     .module('<%= _.camelize(name) %>')
-    .config(<%= _.camelize(name) %>Route)
+    .config(<%= _.camelize(name) %>Route);
 
   /*
    * @name <%= _.camelize(name) %>Route
@@ -43,7 +39,9 @@
 
       /* Add New States Above */
 
-  };
-  <% } %>
+  }
+<% } %>
+  angular
+    .module('<%= _.camelize(name) %>', ['ui.bootstrap','ui.utils','<%= routerModuleName %>','ngAnimate']);
 
 })();

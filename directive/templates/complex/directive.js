@@ -6,10 +6,6 @@
 (function() {
   'use strict';
 
-  angular
-    .module('<%= appname %>')
-    .directive('<%= _.camelize(name) %>', <%= _.camelize(name) %>)
-
   /*
    * @name <%= _.camelize(name) %>
    * @desc
@@ -17,7 +13,7 @@
    * @returns directive object
    * @memberOf Directives
    */
-  function() {
+  function <%= _.camelize(name) %>() {
     return {
       restrict: 'EA',
       replace: true,
@@ -29,6 +25,10 @@
 
       }
     };
-  };
+  }
+
+  angular
+    .module('<%= appname %>')
+    .directive('<%= _.camelize(name) %>', <%= _.camelize(name) %>);
 
 })();
