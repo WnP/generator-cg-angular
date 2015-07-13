@@ -6,10 +6,6 @@
 (function() {
   'use strict';
 <% if (!uirouter) { %>
-  angular
-    .module('<%= _.camelize(name) %>')
-    .config(<%= _.camelize(name) %>Route);
-
   /*
    * @name <%= _.camelize(name) %>Route
    * @desc defined route for module <%= name %>
@@ -22,12 +18,12 @@
       /* Add New Routes Above */
 
   }
-<% } %>
-<% if (uirouter) { %>
+
   angular
     .module('<%= _.camelize(name) %>')
     .config(<%= _.camelize(name) %>Route);
-
+<% } %>
+<% if (uirouter) { %>
   /*
    * @name <%= _.camelize(name) %>Route
    * @desc defined route for module <%= name %>
@@ -40,6 +36,11 @@
       /* Add New States Above */
 
   }
+
+  angular
+    .module('<%= _.camelize(name) %>')
+    .config(<%= _.camelize(name) %>Route);
+
 <% } %>
   angular
     .module('<%= _.camelize(name) %>', ['ui.bootstrap','ui.utils','<%= routerModuleName %>','ngAnimate']);
