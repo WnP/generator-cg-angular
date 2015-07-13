@@ -5,6 +5,9 @@
 
 (function() {
   'use strict';
+
+  angular
+    .module('<%= _.camelize(name) %>', ['ui.bootstrap','ui.utils','<%= routerModuleName %>','ngAnimate']);
 <% if (!uirouter) { %>
   /*
    * @name <%= _.camelize(name) %>Route
@@ -40,9 +43,5 @@
   angular
     .module('<%= _.camelize(name) %>')
     .config(<%= _.camelize(name) %>Route);
-
 <% } %>
-  angular
-    .module('<%= _.camelize(name) %>', ['ui.bootstrap','ui.utils','<%= routerModuleName %>','ngAnimate']);
-
 })();
